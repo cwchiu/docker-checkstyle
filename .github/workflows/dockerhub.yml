@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: arick/checkstyle:10.7.0
+          tags: chuiwenchiu/checkstyle:10.7.0
