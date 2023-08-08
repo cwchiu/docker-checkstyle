@@ -26,4 +26,5 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: chuiwenchiu/checkstyle:10.7.0
+          tags: chuiwenchiu/checkstyle:10.12.2
+          file: Dockerfile.distroless

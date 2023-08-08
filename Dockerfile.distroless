@@ -1,0 +1,9 @@
+FROM curlimages/curl:latest as downloader
+
+RUN curl -o /tmp/checkstyle.jar -L https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.2/checkstyle-10.12.2-all.jar
+
+
+FROM gcr.io/distroless/java:11
+COPY --from=downloader /tmp/checkstyle.jar /
+
+CMD ["java","-jar","/checkstyle.jar"]
